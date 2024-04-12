@@ -1,0 +1,10 @@
+canvas {
+  z-index: -1;
+
+  display: block !important;
+  width: 100% !important ;
+  height: 100% !important;
+  position: fixed;
+  opacity: 1;
+  top: 0;
+}

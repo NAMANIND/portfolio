@@ -1,0 +1,275 @@
+.about-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin: 150px 0px;
+}
+
+body,
+html {
+  /* overflow-y: hidden; */
+}
+
+/* .about-container img{
+    height: 100%;
+    object-fit: contain;
+} */
+
+.about-head {
+  padding: 50px 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: fit-content;
+  z-index: 10;
+  color: white;
+  text-align: left;
+}
+
+.about-head h1 {
+  font-family: "Manrope", sans-serif;
+  font-size: 90px;
+  font-weight: 400;
+  letter-spacing: -2.5px;
+  line-height: 85px;
+  z-index: 5;
+  width: 100%;
+  margin: 0;
+
+  text-align: left;
+
+  transition: all 0.3s ease-in-out;
+  /* cursor: pointer; */
+
+  /* position: absolute;
+    top: 0; 
+    left: 0; */
+}
+
+.about-container .about-head {
+  mix-blend-mode: exclusion;
+}
+
+.fi {
+  transform: translate(50px, 0px);
+  transition: transform ease-in-out 2s !important;
+  transition-delay: 0.8ms;
+}
+
+#about.loaded .fi {
+  transform: translate(0px, 0);
+}
+
+.ts {
+  transform: translate(0px, 0px);
+  transition: transform ease-in-out 1.5s !important;
+  transition-delay: 0.8ms;
+}
+
+#about.loaded .ts {
+  transform: translate(40px, 0);
+}
+
+.tk {
+  transform: translate(0rem, 0px);
+  transition: transform ease-in-out 1.5s !important;
+  transition-delay: 0.8ms;
+}
+
+#about.loaded .tk {
+  transform: translate(300px, 0);
+}
+
+.tr {
+  transform: translate(0rem, 0px);
+  transition: transform ease-in-out 1.5s !important;
+  transition-delay: 0.8ms;
+}
+
+#about.loaded .tr {
+  transform: translate(100px, 0);
+}
+
+@font-face {
+  src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+    format("woff2");
+  font-family: "Meta";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.about-head span {
+  font-family: "Playfair Display", serif;
+  font-size: 90px;
+  font-weight: 100;
+  /* color: aqua; */
+
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.about-head h1 {
+  pointer-events: none;
+}
+
+.about-head span {
+  pointer-events: auto;
+}
+
+.about-head span:hover {
+  color: #fff;
+}
+
+.about-head h1:hover {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.about-head em {
+  font-style: normal;
+  content: attr(data-heading);
+  overflow: hidden;
+  color: #fc0;
+  width: 100%;
+  z-index: 5;
+  text-shadow: none;
+  left: 27%;
+  text-align: left;
+  animation: flicker 3s linear infinite;
+}
+@keyframes flicker {
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    opacity: 0.99;
+    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.4),
+      1px -1px 0 rgba(255, 255, 255, 0.4), -1px 1px 0 rgba(255, 255, 255, 0.4),
+      1px 1px 0 rgba(255, 255, 255, 0.4), 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00,
+      0 0 15px #f44, 0 0 2px #ff7e00, 0 2px 3px #000;
+  }
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    opacity: 0.4;
+    text-shadow: none;
+  }
+}
+
+.pk {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .about-head h1 {
+    font-family: "Manrope", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: -1.5px;
+    line-height: 25px;
+    z-index: 5;
+    width: 100%;
+    margin: 0;
+
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    /* position: absolute;
+      top: 0; 
+      left: 0; */
+  }
+
+  .pk {
+    display: block;
+    margin-bottom: 100px;
+  }
+  .gy {
+    display: none;
+  }
+
+  .about-head span {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 100;
+    /* color: aqua; */
+
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .about-head {
+    padding: 15px;
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: fit-content;
+    z-index: 10;
+    color: white;
+  }
+
+  .pk {
+    transform: translate(-15rem, 80px);
+    transition: transform ease-in-out 1s !important;
+    transition-delay: 0.3ms;
+  }
+
+  #about.loaded .pk {
+    transform: translate(0px, 80px);
+  }
+
+  .about-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .fi {
+    height: 40vh;
+    width: 90% !important;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: unset !important;
+    right: 0px;
+  }
+}
+
+.fi {
+  height: 100vh;
+  width: 40vw;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  position: absolute;
+  right: 0px;
+}
+
+.imp {
+  /* height: 100%; */
+  /* scale: 2; */
+  object-fit: contain;
+  /* filter: grayscale(1); */
+  transition: all 0.5s ease-in-out;
+}
+
+.about-container .imp:hover {
+  scale: 1.02;
+}
+
+/* body {
+  height: 100vh !important;
+} */
