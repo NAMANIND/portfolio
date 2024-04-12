@@ -118,11 +118,11 @@ function Homeinfo() {
               <div>
                 <p>
                   <em>
-                    "I have had the pleasure of working with Naman on multiple
+                    I have had the pleasure of working with Naman on multiple
                     digital projects, and I have always been impressed by his
                     customer-centric approach and attention to detail. His
                     solutions consistently exceed expectations and drive
-                    tangible results."
+                    tangible results.
                   </em>
                 </p>
                 <p className="mt-5">
