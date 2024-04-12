@@ -9,7 +9,7 @@ function page({ params }) {
 
   return (
     <div className="w-screen !overflow-x-hidden">
-      <Projectsection imgurl={movie.poster} title={movie.title} />
+      <Projectsection imgurl={movie.poster} title={movie.name} />
       <div className="w-full h-44 mx-56  text-black">
         <h1 className="text-5xl font-semibold text-black ">{movie.title}</h1>
         <p className="mt-2 leading-relaxed text-gray-700 text-lg ">
