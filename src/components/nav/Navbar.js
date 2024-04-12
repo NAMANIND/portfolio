@@ -60,7 +60,7 @@ function Navbar() {
                 <li className="relative group">
                   <a href="/projects" className=" hover:text-black   text-2xl">
                     <span className="tracking-[-1em] mr-5 group-hover:tracking-normal group-hover:mr-3  transition-all duration-300 ease-in-out">
-                      //
+                      {"//"}
                     </span>
                     {location ? "Viewing Work" : "View Work"}
                   </a>

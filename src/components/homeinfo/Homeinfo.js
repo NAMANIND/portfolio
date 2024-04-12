@@ -9,7 +9,7 @@ function Homeinfo() {
         <div className="text-3xl leading-[150%]    tracking-tight">
           {/* <h2></h2> */}
           <p>
-            Hi, I'm Naman Rai. With a proven track record of developing
+            Hi, I{"'"}m Naman Rai. With a proven track record of developing
             impactful digital solutions, I bring over 2 years of experience in
             full-stack development, specializing in cross-platform applications
             and dynamic website designs. I thrive on collaboration and am
@@ -62,9 +62,9 @@ function Homeinfo() {
 
             <p>
               I specialize in developing cutting-edge digital solutions that
-              shape the future of brands. Whether it's launching new products or
-              optimizing existing ones, I ensure your brand stands out and makes
-              a lasting impact.
+              shape the future of brands. Whether it{"'"}s launching new
+              products or optimizing existing ones, I ensure your brand stands
+              out and makes a lasting impact.
             </p>
           </div>
         </div>
@@ -78,11 +78,11 @@ function Homeinfo() {
               <div>
                 <p>
                   <em>
-                    "I would highly recommend Naman for all that he brings to
-                    the table. Not only is he one of the strongest developers I
-                    have worked with, but he also brings an unparalleled ability
-                    to lead and inspire teams. With him on your project, you can
-                    expect nothing short of excellence."
+                    I would highly recommend Naman for all that he brings to the
+                    table. Not only is he one of the strongest developers I have
+                    worked with, but he also brings an unparalleled ability to
+                    lead and inspire teams. With him on your project, you can
+                    expect nothing short of excellence.
                   </em>
                 </p>
                 <p className="mt-5">- Gagan Mauli, Head of Digital Labs</p>
@@ -90,11 +90,11 @@ function Homeinfo() {
               <div>
                 <p>
                   <em>
-                    "I had the pleasure of collaborating with Naman on a
+                    I had the pleasure of collaborating with Naman on a
                     high-pressure project, and I was impressed by his ability to
                     remain calm and creative under challenging circumstances. He
                     consistently delivers exceptional results and is a valuable
-                    asset to any team."
+                    asset to any team.
                   </em>
                 </p>
                 <p className="mt-5">
@@ -104,11 +104,11 @@ function Homeinfo() {
               <div>
                 <p>
                   <em>
-                    "Naman's dedication and expertise were evident throughout
+                    Naman{"'"}s dedication and expertise were evident throughout
                     our collaboration. He is not only highly skilled but also a
                     great team player who fosters a positive and productive work
                     environment. I look forward to working with him again in the
-                    future."
+                    future.
                   </em>
                 </p>
                 <p className="mt-5">
