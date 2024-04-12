@@ -178,14 +178,21 @@ function Home() {
                     itemComponent = (
                       <motion.div
                         key={index}
-                        style={{ scale }}
-                        className="relative cursor-pointer aspect-[9/16] w-[300px] shrink-0 overflow-clip rounded-2xl md:aspect-video md:w-[60vw]"
-                        // onClick={() => {
-                        //   window.location.href = `./projects/${encodeURIComponent(
-                        //     movie.name
-                        //   )}`;
-                        // }}
+                        style={{
+                          scale,
 
+                          cursor:
+                            carouselVariant === "active"
+                              ? "pointer"
+                              : "default",
+                        }}
+                        className="relative  aspect-[9/16] w-[300px] shrink-0 overflow-clip rounded-2xl md:aspect-video md:w-[60vw]"
+                        onClick={() => {
+                          //  check if ok is true
+                          if (carouselVariant === "active") {
+                            pro(movie.name);
+                          }
+                        }}
                         variants={{
                           active: { opacity: 1, y: 0 },
                           inactive: { opacity: 0, y: 20 },
@@ -211,7 +218,7 @@ function Home() {
                           animate={carouselVariant}
                           className="absolute bottom-0 left-0 flex w-full flex-col items-center gap-4 p-5 text-lg text-black md:flex-row md:justify-between md:gap-0 "
                         >
-                          <p className="text-xl font-medium">{movie.title}</p>
+                          <p className="text-2xl font-medium">{movie.title}</p>
                           {/* <a
                             href={`./projects/${encodeURIComponent(
                               movie.name
@@ -221,7 +228,7 @@ function Home() {
                           </a> */}
 
                           <button
-                            className="group  text-gray-600 "
+                            className="group  text-gray-600 font-medium text-lg "
                             onClick={() => pro(movie.name)}
                           >
                             View Project{" "}
@@ -293,9 +300,9 @@ function Home() {
             >
               <button
                 onClick={() => handleClick(-1)}
-                className="prev-button text-lg text-gray-600  w-[200px]"
+                className="prev-button text-lg text-gray-600 group  w-[200px]"
               >
-                <span className="drop-shadow-2xl px-2 py-2 rounded-full font-medium bg-white/75 backdrop-blur">
+                <span className="drop-shadow-2xl px-2 py-2 rounded-full font-medium bg-white/75 backdrop-blur tracking-tighter group-hover:tracking-widest transition-all duration-300 ease-in-out">
                   {"<"}-
                 </span>
               </button>
@@ -309,9 +316,9 @@ function Home() {
             >
               <button
                 onClick={() => handleClick(1)}
-                className="next-button text-lg text-gray-600   w-[200px]"
+                className="next-button text-lg text-gray-600  group  w-[200px]"
               >
-                <span className="drop-shadow-2xl px-2 py-2 rounded-full font-medium bg-white/75 backdrop-blur  ">
+                <span className="drop-shadow-2xl px-2 py-2 rounded-full font-medium bg-white/75 backdrop-blur tracking-tighter group-hover:tracking-widest transition-all duration-300 ease-in-out ">
                   -{">"}
                 </span>
               </button>
