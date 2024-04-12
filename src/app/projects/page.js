@@ -24,6 +24,7 @@ function Page() {
               title={movie.title}
               type={movie.type}
               tags={movie.tags}
+              name={movie.name}
             />
           ))}
         </div>
