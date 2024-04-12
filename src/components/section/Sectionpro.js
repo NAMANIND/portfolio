@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import clsx from "clsx";
 
-function Sectionpro({ title, poster, key, type, tags }) {
+function Sectionpro({ title, poster, key, name, type, tags }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -32,10 +32,10 @@ function Sectionpro({ title, poster, key, type, tags }) {
       transition={{ type: "ease", duration: "0.5" }}
       className="group mb-3 sm:mb-8 last:mb-0 w-[48%] rounded-lg"
     >
-      <Link href={`./projects/${encodeURIComponent(title)}`} passHref>
+      <Link href={`./projects/${encodeURIComponent(name)}`} passHref>
         <motion.section
           // Use layoutId here
-          layoutId={`project-${title}`}
+          layoutId={`project-${name}`}
           className=" max-w-[80rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[80vh] hover:bg-gray-200 transition sm:group-even:pl-0 dark:text-white dark:bg-white/10 dark:hover:bg-white/20"
         >
           <div
