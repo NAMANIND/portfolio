@@ -2,7 +2,7 @@
 export const movies = [
   {
     id: 1,
-    poster: "/img/iena.png",
+    poster: "/img2/iena.png",
     name: "InfluenceExchangeConfexnAwards",
     title: "IENA",
     type: "Website",
@@ -11,7 +11,7 @@ export const movies = [
   {
     id: 2,
 
-    poster: "/img/app.png",
+    poster: "/img2/app.png",
     name: "ASSENTConnectPlus",
     title: "ASSENT Connect Plus",
     type: "App IOS/Android",
@@ -19,7 +19,7 @@ export const movies = [
   },
   {
     id: 3,
-    poster: "/img/bitnib.png",
+    poster: "/img2/bitnib.png",
     name: "BitnibDesign",
     title: "Bitnib Design",
     type: "Website",
@@ -28,7 +28,7 @@ export const movies = [
 
   {
     id: 4,
-    poster: "/img/iam.png",
+    poster: "/img2/iam.png",
     name: "PortfolioWebsite",
     title: "Portfolio",
     type: "Website",
@@ -36,7 +36,7 @@ export const movies = [
   },
   {
     id: 5,
-    poster: "/img/power.png",
+    poster: "/img2/power.png",
     name: "PowerTab",
     title: "PowerTab",
     type: "Browser Extension",
@@ -44,7 +44,7 @@ export const movies = [
   },
   {
     id: 6,
-    poster: "/img/yotta.png",
+    poster: "/img2/yotta.png",
     name: "YottaWebsiteRedesign",
     title: "Yotta",
     type: "Website Redesign",
