@@ -32,7 +32,7 @@ function Sectionpro({ title, poster, key, name, type, tags }) {
       transition={{ type: "ease", duration: "0.5" }}
       className="group mb-3 sm:mb-8 last:mb-0 w-[48%] rounded-lg"
     >
-      <Link href={`./projects/${encodeURIComponent(name)}`} passHref>
+      <a href={`./projects/${encodeURIComponent(name)}`}>
         <motion.section
           // Use layoutId here
           layoutId={`project-${name}`}
@@ -70,7 +70,7 @@ function Sectionpro({ title, poster, key, name, type, tags }) {
             className={imageClasses}
           />
         </motion.section>
-      </Link>
+      </a>
     </motion.div>
   );
 }
