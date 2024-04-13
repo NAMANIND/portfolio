@@ -254,13 +254,13 @@ function Homeinfo() {
                   href={`./projects/${encodeURIComponent(movie.name)}`}
                 >
                   {movie.title}
-                  <span>
+                  <span className="     flex sm:flex-row  flex-col">
                     <span
                       className="
                  sm:opacity-0
                  group-hover:opacity-100
                  transition-all duration-300 ease-in-out
-                 flex sm:flex-row  flex-col
+            
                  opacity-100
 
                 "

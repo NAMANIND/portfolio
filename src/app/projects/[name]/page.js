@@ -1,6 +1,7 @@
 import Projectsection from "@/components/project/Projectsection";
 import React from "react";
 import { movies, randomMoviesSet1, randomMoviesSet2 } from "../../../movies";
+import ASSENTConnectPlus from "@/components/page_data/ASSENTConnectPlus";
 
 function page({ params }) {
   const { name } = params;
@@ -10,7 +11,7 @@ function page({ params }) {
   return (
     <div className="w-screen !overflow-x-hidden">
       <Projectsection imgurl={movie.poster} title={movie.title} />
-      <div className="w-full h-44 mx-56  text-black">
+      <div className="w-full h-44 px-[12vw]  text-black">
         <h1 className="text-5xl font-semibold text-black ">{movie.title}</h1>
         <p className="mt-2 leading-relaxed text-gray-700 text-lg ">
           {movie.type}
@@ -43,6 +44,9 @@ function page({ params }) {
             </a>
           ))}
         </div>
+      </div>
+      <div className="w-full h-full px-[12vw]  text-black">
+        {movie.name === "ASSENTConnectPlus" && <ASSENTConnectPlus />}
       </div>
     </div>
   );

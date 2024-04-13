@@ -20,9 +20,9 @@ function Projectsection({ imgurl, title }) {
     <div className=" flex h-[130vh] items-center" ref={ref}>
       <motion.div
         initial={{ opacity: 0, y: "-5vh", scale: 1 }}
-        animate={{ opacity: 1, y: "-32vh", scale: 1 }}
+        animate={{ opacity: 1, y: "-18vh", scale: 1 }}
         transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
-        className="w-screen  "
+        className="w-screen absolute left-[0%] top-[50%]   -translate-x-1/2 -translate-y-1/2   "
       >
         <MarqueeText text={sampleText} />
       </motion.div>
