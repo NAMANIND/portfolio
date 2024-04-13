@@ -3,7 +3,7 @@ import React from "react";
 function ASSENTConnectPlus() {
   return (
     <div>
-      <div className="main__container newt">
+      {/* <div className="main__container newt">
         <div className="l__content">
           <div className="l__playground">
             <div>
@@ -145,28 +145,15 @@ function ASSENTConnectPlus() {
             </div>
             <div className="playground__gallery">
               <div className="playground__row--left playground__row">
-                {/* <img 
-                        src="../project/purplle/535aee120242951.60aded536c51b.jpg"
-                        alt="Neon Girl Painting Portrait" data-itemPosition="0" data-scrollModifier="1.07">
-                        <img
-                        src="./project/purplle/901576120242951.60aded536bd59.jpg"
-                        alt="Clouds Study" data-itemPosition="1" data-scrollModifier="1.07"> */}
-                {/* <img
-                        src=""
-                        alt="Viking Fox Sketch" data-itemPosition="2" data-scrollModifier="1.07"> */}
+            
               </div>
               <div className="playground__row--right playground__row">
-                {/* <img
-                        src="../project/purplle/cd063a120242951.60aded536ce49.jpg"
-                        alt="Jazz Vintage Man Painting" data-itemPosition="0" data-scrollModifier="1">
-                        <img
-                        src="../project/purplle/c0aee8120242951.60aded536d79c.jpg"
-                        alt="Princess Study Portrait" data-itemPosition="1" data-scrollModifier="1"> */}
+               
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
