@@ -368,8 +368,8 @@ function Home() {
           window.location.href = "./projects";
         }}
       >
-        <h1 className=" text-gray-600 font-medium cursor-pointer  group text-2xl px-4 mx-auto max-w-full sm:px-6 lg:px-8 relative ">
-          <span className="px-7 sm:px-10">
+        <h1 className=" text-gray-600 font-medium cursor-pointer py-10  group text-3xl px-4 mx-auto max-w-full sm:px-6 lg:px-8 relative ">
+          <span className="px-7  sm:px-10">
             All Projects{" "}
             <span className="tracking-tighter group-hover:tracking-widest transition-all duration-300 ease-in-out">
               {" "}
