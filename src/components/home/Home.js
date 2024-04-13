@@ -363,14 +363,12 @@ function Home() {
           inactive: { opacity: 0, y: 20 },
         }}
         transition={{ duration: 0.4 }}
-        className="-mt-[calc((100vh-(300px*(16/9)))/2)] space-y-3 pt-4 md:-mt-[calc((100vh-(60vw*(9/16)))/2)]"
+        className="-mt-[calc((100vh-(300px*(16/9)))/2)] space-y-3 cursor-pointer pt-4 md:-mt-[calc((100vh-(60vw*(9/16)))/2)]"
+        onClick={() => {
+          window.location.href = "./projects";
+        }}
       >
-        <h1
-          onClick={() => {
-            window.location.href = "./projects";
-          }}
-          className=" text-gray-600 font-medium cursor-pointer  group text-2xl px-4 mx-auto max-w-full sm:px-6 lg:px-8 relative "
-        >
+        <h1 className=" text-gray-600 font-medium cursor-pointer  group text-2xl px-4 mx-auto max-w-full sm:px-6 lg:px-8 relative ">
           <span className="px-7 sm:px-10">
             All Projects{" "}
             <span className="tracking-tighter group-hover:tracking-widest transition-all duration-300 ease-in-out">
