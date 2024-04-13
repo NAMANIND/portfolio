@@ -14,7 +14,7 @@ function Sectionpro({ title, poster, key, name, type, tags }) {
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
   const imageClasses = clsx(
-    "absolute hidden sm:block top-0 -right-0 w-[100%] h-full object-cover rounded-t-lg shadow-2xl transition   duration-500 ease-in-out transform",
+    "absolute  sm:block top-0 -right-0 w-[100%] h-full object-cover rounded-t-lg shadow-2xl transition   duration-500 ease-in-out transform",
     {
       "group-hover:scale-[1.07] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-0": true,
       "group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-0": true,
@@ -30,16 +30,16 @@ function Sectionpro({ title, poster, key, name, type, tags }) {
         opacity: opacityProgess,
       }}
       transition={{ type: "ease", duration: "0.5" }}
-      className="group mb-3 sm:mb-8 last:mb-0 w-[48%] rounded-lg"
+      className="group mb-3 sm:mb-8 last:mb-0 sm:w-[48%] w-full  rounded-lg"
     >
       <a href={`./projects/${encodeURIComponent(name)}`}>
         <motion.section
           // Use layoutId here
           layoutId={`project-${name}`}
-          className=" max-w-[80rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[80vh] hover:bg-gray-200 transition sm:group-even:pl-0 dark:text-white dark:bg-white/10 dark:hover:bg-white/20"
+          className=" max-w-[80rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[80vh] h-[50vh] hover:bg-gray-200 transition sm:group-even:pl-0 dark:text-white dark:bg-white/10 dark:hover:bg-white/20"
         >
           <div
-            className="pt-4 pb-7 absolute z-50 px-5  sm:pt-10 w-[40%] flex flex-col h-full sm:group-even:left-[60%]
+            className="pt-4 pb-7 absolute z-50 px-5  sm:pt-10 sm:w-[40%]  w-[50%] flex flex-col h-full sm:group-even:left-[60%]
           backdrop-blur bg-black/40
           
           

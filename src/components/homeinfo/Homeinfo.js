@@ -20,7 +20,7 @@ function Homeinfo() {
             opacity: 1,
           }}
           viewport={{ once: true, amount: 0.3 }}
-          className="text-3xl leading-[150%]    tracking-tight"
+          className="sm:text-3xl text-xl leading-[150%]    tracking-tight"
         >
           {/* <h2></h2> */}
           <p>
@@ -33,7 +33,7 @@ function Homeinfo() {
           </p>
         </motion.div>
 
-        <div className=" flex flex-row justify-between flex-grow">
+        <div className=" flex sm:flex-row flex-col justify-between flex-grow">
           <motion.div
             transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
             initial={{
@@ -45,7 +45,7 @@ function Homeinfo() {
               opacity: 1,
             }}
             viewport={{ once: true, amount: 0.3 }}
-            className="w-1/3"
+            className="sm:w-1/3 w-full"
           >
             <h2 className="text-3xl text-gray-600 font-medium">Capabilities</h2>
             <ul>
@@ -59,7 +59,7 @@ function Homeinfo() {
                 {/* <strong>UI/UX Design:</strong> Crafting intuitive user
                 experiences through thoughtful interface design and usability
                 testing. */}
-                UI/UX Design
+                UI Development
               </li>
               <li>
                 {/* <strong>Creative Execution:</strong> Transforming complex ideas
@@ -92,7 +92,7 @@ function Homeinfo() {
               opacity: 1,
             }}
             viewport={{ once: true, amount: 0.3 }}
-            className="w-1/2"
+            className="sm:w-1/2 w-full"
           >
             {/* <strong>Insight:</strong> Leveraging insights to inform design
                 decisions and drive business growth. */}
@@ -108,7 +108,7 @@ function Homeinfo() {
           </motion.div>
         </div>
 
-        <motion.div
+        {/* <motion.div
           transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
           initial={{
             y: 20,
@@ -183,7 +183,7 @@ function Homeinfo() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         <motion.div
           transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
@@ -212,11 +212,11 @@ function Homeinfo() {
             opacity: 1,
           }}
           viewport={{ once: true, amount: 0.3 }}
-          className=" flex flex-row justify-between flex-grow"
+          className=" flex sm:flex-row flex-col justify-between flex-grow"
         >
           <div></div>
 
-          <div className="w-1/2">
+          <div className="sm:w-1/2 w-full">
             <h2 className="text-3xl text-gray-600 font-medium">Clients</h2>
             <p>
               ASSENT STEEL INDUSTRIES, The Influence Exchange Confex & Awards,
@@ -236,10 +236,10 @@ function Homeinfo() {
             opacity: 1,
           }}
           viewport={{ once: true, amount: 0.3 }}
-          className=" flex flex-row justify-between flex-grow"
+          className=" flex sm:flex-row flex-col justify-between flex-grow"
         >
           <h2 className="text-3xl text-gray-600 font-medium">Projects</h2>
-          <ul className="w-1/2">
+          <ul className="sm:w-1/2 w-full">
             {moviesok.map((movie) => (
               <li
                 key={movie.id}
@@ -250,16 +250,19 @@ function Homeinfo() {
                 "
               >
                 <a
-                  className="flex justify-between"
+                  className="flex sm:flex-row  flex-col justify-between"
                   href={`./projects/${encodeURIComponent(movie.name)}`}
                 >
                   {movie.title}
                   <span>
                     <span
                       className="
-                 opacity-0
+                 sm:opacity-0
                  group-hover:opacity-100
                  transition-all duration-300 ease-in-out
+                 flex sm:flex-row  flex-col
+                 opacity-100
+
                 "
                     >
                       {movie.type}-{" "}
@@ -282,10 +285,10 @@ function Homeinfo() {
             opacity: 1,
           }}
           viewport={{ once: true, amount: 0.3 }}
-          className=" flex flex-row justify-between flex-grow mt-20"
+          className=" flex sm:flex-row flex-col justify-between flex-grow mt-20"
         >
           <div></div>
-          <div className="w-1/2">
+          <div className="sm:w-1/2 w-full">
             <p className="text-2xl text-gray-600">
               Want to collaborate on your next project? <br /> I would love to
               hear from you.
@@ -304,7 +307,7 @@ function Homeinfo() {
           </div>
         </motion.div>
 
-        <div className="flex flex-row justify-between  text-black  text-2xl font-medium items-end mb-10">
+        <div className="flex flex-row  justify-between  text-black  text-2xl font-medium items-end mb-10">
           <div>
             Naman rai
             <br />

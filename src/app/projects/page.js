@@ -16,7 +16,7 @@ function Page() {
       className="h-screen w-screen text-black font-normal text-xl px-4 mx-auto max-w-full sm:px-6 lg:px-8"
     >
       <div className="sm:px-10 w-100 flex gap-52 flex-col ">
-        <div className="flex flex-wrap  gap-[4%] ">
+        <div className="flex sm:flex-wrap sm:flex-row flex-col  gap-[4%] ">
           {moviesok.map((movie, index) => (
             <Sectionpro
               poster={movie.poster}
@@ -29,9 +29,9 @@ function Page() {
           ))}
         </div>
 
-        <div className=" flex flex-row justify-between flex-grow text-gray-600 text-xl mt-20 ">
+        <div className=" flex sm:flex-row flex-col justify-between flex-grow text-gray-600 text-xl mt-20 ">
           <div></div>
-          <div className="w-1/2">
+          <div className="sm:w-1/2 w-full">
             <p className="text-2xl">
               Looking to work with me on your next project? I’d love to hear
               from you.

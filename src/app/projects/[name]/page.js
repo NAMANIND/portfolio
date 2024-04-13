@@ -25,6 +25,24 @@ function page({ params }) {
             </li>
           ))}
         </ul>
+        {/* live links */}
+        <div className=" gap-4 mt-4">
+          Live :
+          {movie.live.map((link, index) => (
+            <a
+              href={link}
+              key={index}
+              className=" ml-5 text-lg leading-loose uppercase tracking-wider text-black underline rounded-full "
+              target="_blank"
+            >
+              {movie.id === 2
+                ? index === 0
+                  ? "Play Store"
+                  : "App Store"
+                : "Website"}
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );

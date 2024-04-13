@@ -128,6 +128,35 @@ function Home() {
     }
   }
 
+  // const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+
+  // // Update cursor position on mouse move
+  // const updateCursorPosition = (event) => {
+  //   setCursorPosition({ x: event.clientX, y: event.clientY });
+  // };
+
+  // console.log(cursorPosition);
+  // useEffect(() => {
+  //   // Add event listener to track mouse move
+  //   document
+  //     .getElementById("mak")
+  //     .addEventListener("mousemove", updateCursorPosition);
+
+  //   // Clean up event listener
+  //   return () => {
+  //     document
+  //       .getElementById("mak")
+  //       .removeEventListener("mousemove", updateCursorPosition);
+  //   };
+  // }, []); // Only run once on component mount
+
+  // const variants2 = {
+  //   default: {
+  //     left: cursorPosition.x - 400 + "px",
+  //     top: cursorPosition.y - 610 + "px",
+  //   },
+  // };
+
   return (
     <motion.div
       // animate={carouselVariant}
@@ -177,16 +206,16 @@ function Home() {
                   case 1:
                     itemComponent = (
                       <motion.div
+                        id="mak"
                         key={index}
                         style={{
                           scale,
-
                           cursor:
                             carouselVariant === "active"
                               ? "pointer"
                               : "default",
                         }}
-                        className="relative  aspect-[9/16] w-[300px] shrink-0 overflow-clip rounded-2xl md:aspect-video md:w-[60vw]"
+                        className="relative gk group aspect-[9/16] w-[300px] shrink-0 overflow-clip rounded-2xl md:aspect-video md:w-[60vw]"
                         onClick={() => {
                           //  check if ok is true
                           if (carouselVariant === "active") {
@@ -219,24 +248,25 @@ function Home() {
                           className="absolute bottom-0 left-0 flex w-full flex-col items-center gap-4 p-5 text-lg text-black md:flex-row md:justify-between md:gap-0 "
                         >
                           <p className="text-2xl font-medium">{movie.title}</p>
-                          {/* <a
-                            href={`./projects/${encodeURIComponent(
-                              movie.name
-                            )}`}
-                          >
-                            Nominate
-                          </a> */}
+                          <motion.button
+                            // variants={variants2}
+                            // initial="default"
+                            // animate="default"
+                            className="   absolute  bottom-[0px] right-[0px]   text-gray-600 font-medium text-lg scale-0 group-hover:scale-100 group-hover:text-black/75 group-hover:drop-shadow-2xl group-hover:backdrop-blur px-2 py-2 rounded-full bg-white/30 backdrop-blur-[4px] tracking-tighter group-hover:tracking-widest transition-all duration-300 ease-in-out  
+                            w-[200px]
+                            h-[200px]
+                            flex items-center justify-center
 
-                          <button
-                            className="group  text-gray-600 font-medium text-lg "
+                            
+                             "
                             onClick={() => pro(movie.name)}
                           >
-                            View Project{" "}
-                            <span className="tracking-tighter group-hover:tracking-widest transition-all duration-300 ease-in-out">
+                            View Project
+                            {/* <span className="tracking-tighter group-hover:tracking-widest transition-all duration-300 ease-in-out">
                               {" "}
                               -{">"}
-                            </span>
-                          </button>
+                            </span> */}
+                          </motion.button>
                         </motion.div>
                       </motion.div>
                     );

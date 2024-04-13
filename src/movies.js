@@ -6,7 +6,8 @@ export const movies = [
     name: "InfluenceExchangeConfexnAwards",
     title: "IENA",
     type: "Website",
-    tags: ["React", "TailwindCSS", "Framer Motion"],
+    tags: ["AppScript", "ScrollJs", "Html", "CSS", "JS"],
+    live: ["https://www.theiecna.com/"],
   },
   {
     id: 2,
@@ -15,7 +16,11 @@ export const movies = [
     name: "ASSENTConnectPlus",
     title: "ASSENT Connect Plus",
     type: "App IOS/Android",
-    tags: ["React Native", "TailwindCSS", "Framer Motion"],
+    tags: ["React Native", "Firebase", "Expo"],
+    live: [
+      "https://play.google.com/store/apps/details?id=com.assent.connectplus",
+      "https://apps.apple.com/app/assent-connect-plus/id6478013818",
+    ],
   },
   {
     id: 3,
@@ -23,7 +28,8 @@ export const movies = [
     name: "BitnibDesign",
     title: "Bitnib Design",
     type: "Website",
-    tags: ["React", "TailwindCSS", "Framer Motion"],
+    tags: ["HTML", "CSS", "JS", "PrallaxJs"],
+    live: ["https://bitnibdesign.com/"],
   },
 
   {
@@ -32,7 +38,8 @@ export const movies = [
     name: "PortfolioWebsite",
     title: "Portfolio",
     type: "Website",
-    tags: ["React", "TailwindCSS", "Framer Motion"],
+    tags: ["GSAP", "THREEJS"],
+    live: ["https://iamayushrai.com/"],
   },
   {
     id: 5,
@@ -41,14 +48,16 @@ export const movies = [
     title: "PowerTab",
     type: "Browser Extension",
     tags: ["React", "TailwindCSS", "Framer Motion"],
+    live: ["https://powertab.vercel.app/"],
   },
   {
     id: 6,
     poster: "/img2/yotta.png",
     name: "YottaWebsiteRedesign",
-    title: "Yotta",
+    title: "Yotta21",
     type: "Website Redesign",
-    tags: ["React", "TailwindCSS", "Framer Motion"],
+    tags: ["HTML", "CSS", "JS", "GSAP"],
+    live: ["https://yotta21.netlify.app"],
   },
 ];
 
