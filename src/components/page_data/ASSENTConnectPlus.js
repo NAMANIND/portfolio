@@ -144,12 +144,8 @@ function ASSENTConnectPlus() {
               </section>
             </div>
             <div className="playground__gallery">
-              <div className="playground__row--left playground__row">
-            
-              </div>
-              <div className="playground__row--right playground__row">
-               
-              </div>
+              <div className="playground__row--left playground__row"></div>
+              <div className="playground__row--right playground__row"></div>
             </div>
           </div>
         </div>
