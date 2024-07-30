@@ -1,7 +1,27 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 
-function page() {
+function Page() {
+  useEffect(() => {
+    // Function to send the height of the document to the parent window
+    const sendHeight = () => {
+      window.parent.postMessage(
+        { height: document.documentElement.scrollHeight },
+        "*"
+      );
+    };
+
+    // Add event listeners for load and resize events
+    window.addEventListener("load", sendHeight);
+    window.addEventListener("resize", sendHeight);
+
+    // Cleanup event listeners on component unmount
+    return () => {
+      window.removeEventListener("load", sendHeight);
+      window.removeEventListener("resize", sendHeight);
+    };
+  }, []); // Empty dependency array ensures this runs once on mount
+
   return (
     <div className="p-0">
       <div className="flex items-center justify-between">
@@ -63,7 +83,7 @@ function page() {
           </a>{" "}
           and to receiving updates from joinpap.com.
         </p>
-        <div class="mt-4">
+        <div className="mt-4">
           <button
             className="w-full rounded-lg px-3 py-2 text-white hover:bg-gray-800"
             style={{ backgroundColor: "rgb(188, 32, 143)" }}
@@ -76,4 +96,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
