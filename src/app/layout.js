@@ -18,11 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={` ${myFont.className} custom-cursor `}>
-        <Navbar />
-
-        {children}
-      </body>
+      <body className={` ${myFont.className} custom-cursor `}>{children}</body>
     </html>
   );
 }
