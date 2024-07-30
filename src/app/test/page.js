@@ -25,7 +25,7 @@ function Page() {
   return (
     <div className="p-0">
       <div className="flex items-center justify-between">
-        <div className="flex items-center">
+        <div className="flex items-center text-black">
           <img
             src="https://www.travelarrow.io/_next/image?url=https%3A%2F%2Fcdn.travelarrow.io%2Flogo.png&amp;w=256&amp;q=75"
             alt="travel arrow logo"
