@@ -54,7 +54,7 @@ function page() {
           </div>
         </div>
         <p className="mt-2 text-center text-xs font-normal text-gray-400">
-          By continuing, you agree to pap's{" "}
+          By continuing, you agree to pap&apos;s{" "}
           <a
             href="https://www.joinpap.com/privacy-policy"
             className="tw-a text-gray-700"
