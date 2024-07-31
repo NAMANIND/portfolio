@@ -7,7 +7,7 @@ function Page() {
     const sendHeight = () => {
       window.parent.postMessage(
         {
-          height: document.documentElement.scrollHeight + 32,
+          height: document.documentElement.scrollHeight,
           width: document.documentElement.scrollWidth,
         },
         "*"
