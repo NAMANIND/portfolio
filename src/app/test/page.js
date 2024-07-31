@@ -6,7 +6,10 @@ function Page() {
     // Function to send the height of the document to the parent window
     const sendHeight = () => {
       window.parent.postMessage(
-        { height: document.documentElement.scrollHeight },
+        {
+          height: document.documentElement.scrollHeight,
+          width: document.documentElement.scrollWidth,
+        },
         "*"
       );
     };
