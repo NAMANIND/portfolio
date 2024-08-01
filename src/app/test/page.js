@@ -6,8 +6,9 @@ function Page() {
     const sendHeight = () => {
       window.parent.postMessage(
         {
-          height: 500,
-          width: 560,
+          height: 452,
+          width: 384,
+          source: "iframe-content", // Unique identifier
         },
         "*"
       );
@@ -27,7 +28,7 @@ function Page() {
   }, []);
 
   return (
-    <div className="p-0     w-[560px] h-[500px]    ">
+    <div className="p-0     w-[384px] h-[450px]    ">
       <div className="flex items-center justify-between">
         <div className="flex items-center text-black">
           <img
