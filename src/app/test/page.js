@@ -26,7 +26,7 @@ function Page() {
   }, []); // Empty dependency array ensures this runs once on mount
 
   return (
-    <div className="p-0">
+    <div className="p-0     w-[560px] h-[500px]    ">
       <div className="flex items-center justify-between">
         <div className="flex items-center text-black">
           <img
