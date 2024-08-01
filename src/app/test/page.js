@@ -28,7 +28,7 @@ function Page() {
   }, []);
 
   return (
-    <div className="p-0     w-[384px] h-[450px]    ">
+    <div>
       <div className="flex items-center justify-between">
         <div className="flex items-center text-black">
           <img
