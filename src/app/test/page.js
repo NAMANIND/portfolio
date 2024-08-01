@@ -3,32 +3,32 @@ import React, { useEffect } from "react";
 
 function Page() {
   useEffect(() => {
-    const sendHeight = () => {
+    const sendDimension = () => {
       window.parent.postMessage(
         {
           height: 452,
           width: 384,
-          source: "iframe-content", // Unique identifier
+          source: "iframe-dimension", // Unique identifier
         },
         "*"
       );
     };
 
-    const handleLoadAndResize = () => {
-      sendHeight();
-    };
-
-    window.addEventListener("load", handleLoadAndResize);
-    window.addEventListener("resize", handleLoadAndResize);
+    window.addEventListener("load", sendDimension);
+    window.addEventListener("resize", sendDimension);
 
     return () => {
-      window.removeEventListener("load", handleLoadAndResize);
-      window.removeEventListener("resize", handleLoadAndResize);
+      window.removeEventListener("load", sendDimension);
+      window.removeEventListener("resize", sendDimension);
     };
   }, []);
 
+  // Main content of the page
+  // Set the height and width of the main content to match the content
+  // width and height be different based on the content
+  // for this example, we are using h-452px w-384px to match the content
   return (
-    <div>
+    <div className=" h-[452px] w-[384px]">
       <div className="flex items-center justify-between">
         <div className="flex items-center text-black">
           <img
