@@ -3,27 +3,28 @@ import React, { useEffect } from "react";
 
 function Page() {
   useEffect(() => {
-    // Function to send the height of the document to the parent window
     const sendHeight = () => {
       window.parent.postMessage(
         {
-          height: document.documentElement.scrollHeight,
-          width: document.documentElement.scrollWidth,
+          height: 500,
+          width: 560,
         },
         "*"
       );
     };
 
-    // Add event listeners for load and resize events
-    window.addEventListener("load", sendHeight);
-    window.addEventListener("resize", sendHeight);
-
-    // Cleanup event listeners on component unmount
-    return () => {
-      window.removeEventListener("load", sendHeight);
-      window.removeEventListener("resize", sendHeight);
+    const handleLoadAndResize = () => {
+      sendHeight();
     };
-  }, []); // Empty dependency array ensures this runs once on mount
+
+    window.addEventListener("load", handleLoadAndResize);
+    window.addEventListener("resize", handleLoadAndResize);
+
+    return () => {
+      window.removeEventListener("load", handleLoadAndResize);
+      window.removeEventListener("resize", handleLoadAndResize);
+    };
+  }, []);
 
   return (
     <div className="p-0     w-[560px] h-[500px]    ">
