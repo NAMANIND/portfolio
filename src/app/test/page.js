@@ -4,14 +4,15 @@ import React, { useEffect } from "react";
 function Page() {
   useEffect(() => {
     const sendDimension = () => {
-      window.parent.postMessage(
+      window.postMessage(
         {
-          height: 452,
+          height: 415,
           width: 384,
           source: "iframe-dimension", // Unique identifier
         },
         "*"
       );
+      alert("sendDimension");
     };
 
     window.addEventListener("load", sendDimension);
@@ -28,7 +29,7 @@ function Page() {
   // width and height be different based on the content
   // for this example, we are using h-452px w-384px to match the content
   return (
-    <div className=" h-[452px] w-[384px]">
+    <div className=" h-[415px] w-[384px]">
       <div className="flex items-center justify-between">
         <div className="flex items-center text-black">
           <img
