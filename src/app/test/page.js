@@ -12,11 +12,12 @@ function Page() {
         },
         "*"
       );
+      console.log("Dimensions sent!");
     };
 
     window.addEventListener("load", sendDimension);
     window.addEventListener("resize", sendDimension);
-    sendDimension();
+    sendDimension(); // must call this function
 
     return () => {
       window.removeEventListener("load", sendDimension);
