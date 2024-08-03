@@ -76,7 +76,7 @@ function Page() {
                     </span>
                   </div>
                   <p className="text-sm font-normal text-zinc-500 ml-7">
-                    Simply connect your email and we'll do the rest — we track
+                    Simply connect your email and well do the rest — we track
                     departures &amp; claim refunds.
                   </p>
                 </div>
