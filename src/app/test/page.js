@@ -4,19 +4,19 @@ import React, { useEffect } from "react";
 function Page() {
   useEffect(() => {
     const sendDimension = () => {
-      window.postMessage(
+      window.parent.postMessage(
         {
-          height: 415,
+          height: 452,
           width: 384,
           source: "iframe-dimension", // Unique identifier
         },
         "*"
       );
-      alert("sendDimension");
     };
 
     window.addEventListener("load", sendDimension);
     window.addEventListener("resize", sendDimension);
+    sendDimension();
 
     return () => {
       window.removeEventListener("load", sendDimension);
@@ -29,73 +29,65 @@ function Page() {
   // width and height be different based on the content
   // for this example, we are using h-452px w-384px to match the content
   return (
-    <div className=" h-[415px] w-[384px]">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center text-black">
-          <img
-            src="https://www.travelarrow.io/_next/image?url=https%3A%2F%2Fcdn.travelarrow.io%2Flogo.png&amp;w=256&amp;q=75"
-            alt="travel arrow logo"
-            className="mr-1 h-6 w-6"
-          />
-          ×
-          <img
-            src="https://cdn.prod.website-files.com/661aaea740edaca5a82103d3/662314e5432ba73de164b660_pap!.svg"
-            alt="pap logo"
-            className="ml-2 h-8 w-8"
-          />
-        </div>
-      </div>
-      <div className="mt-2">
-        <div className="m-3">
-          <p className="text-center text-lg font-light text-zinc-800">
-            Travel Arrow partners with <span className="font-bold">pap!</span>{" "}
-            to offer exclusive flight benefits
-          </p>
-        </div>
-        <div className="mb-6 ml-1 mr-1 mt-4 rounded-3xl border border-slate-200 pb-3 pl-2 pr-2 pt-3">
-          <div className="m-2">
-            <div className="mb-4">
-              <div className="flex items-center">
-                <span className="mr-2">🛫</span>
-                <span className="text-sm font-bold text-zinc-600">
-                  Flight Delay Compensation
-                </span>
-              </div>
-              <p className="ml-7 text-sm font-normal text-zinc-500">
-                Receive up to $650+ automatically if your flight departure is
-                delayed
-              </p>
-            </div>
-            <div>
-              <div className="flex items-center">
-                <span className="mr-2">💸</span>
-                <span className="text-sm font-bold text-zinc-600">
-                  Cashback Opportunities
-                </span>
-              </div>
-              <p className="ml-7 text-sm font-normal text-zinc-500">
-                Join 10,000+ travelers who trust pap! for seamless refund claims
-              </p>
+    <div className=" h-[452px] w-[384px] fixed inset-y-0 left-0 flex items-start justify-center tw-anti-aliased">
+      <div className="flex items-center transition-all w-full h-full transform bg-white rounded-lg">
+        <div className="p-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center">
+              <img
+                src="https://www.travelarrow.io/_next/image?url=https%3A%2F%2Fcdn.travelarrow.io%2Flogo.png&w=256&q=75"
+                alt="travel arrow logo"
+                className="w-6 h-6 mr-1"
+              />
+              ×
+              <img
+                src="https://cdn.prod.website-files.com/661aaea740edaca5a82103d3/662314e5432ba73de164b660_pap!.svg"
+                alt="pap logo"
+                className="w-8 h-8 ml-1"
+              />
             </div>
           </div>
-        </div>
-        <p className="mt-2 text-center text-xs font-normal text-gray-400">
-          By continuing, you agree to pap&apos;s{" "}
-          <a
-            href="https://www.joinpap.com/privacy-policy"
-            className="tw-a text-gray-700"
-          >
-            Privacy Policy
-          </a>{" "}
-          and to receiving updates from joinpap.com.
-        </p>
-        <div className="mt-4">
-          <button
-            className="w-full rounded-lg px-3 py-2 text-white hover:bg-gray-800"
-            style={{ backgroundColor: "rgb(188, 32, 143)" }}
-          >
-            Continue
-          </button>
+          <div className="mt-2">
+            <div className="m-3">
+              <p className="text-lg font-light text-center text-zinc-800">
+                Turn flight delays into <span className="font-bold">cash</span>{" "}
+                💸
+              </p>
+            </div>
+            <div className="pt-3 pb-3 pl-2 pr-2 mt-4 mb-6 ml-1 mr-1 border rounded-3xl border-slate-200">
+              <div className="m-2">
+                <div className="mb-4">
+                  <div className="flex items-center">
+                    <span className="mr-2">🤝</span>
+                    <span className="text-sm font-bold text-zinc-600">
+                      Up to $650 in Flight Delay Compensation
+                    </span>
+                  </div>
+                  <p className="text-sm font-normal text-zinc-500 ml-7">
+                    We teamed up with pap! to automatically claim money when
+                    your flights get delayed
+                  </p>
+                </div>
+                <div>
+                  <div className="flex items-center">
+                    <span className="mr-2">🛫️</span>
+                    <span className="text-sm font-bold text-zinc-600">
+                      One time set-up
+                    </span>
+                  </div>
+                  <p className="text-sm font-normal text-zinc-500 ml-7">
+                    Simply connect your email and we'll do the rest — we track
+                    departures &amp; claim refunds.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="mt-4">
+              <button className="w-full mt-6 px-3 py-2 text-white rounded-lg bg-pink-600 focus:outline-none">
+                Opt-In
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
