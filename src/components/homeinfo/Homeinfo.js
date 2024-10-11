@@ -251,7 +251,7 @@ function Homeinfo() {
               >
                 <a
                   className="flex sm:flex-row  flex-col justify-between"
-                  href={`./projects/${encodeURIComponent(movie.name)}`}
+                  href={`./work/${encodeURIComponent(movie.name)}`}
                 >
                   {movie.title}
                   <span className="     flex sm:flex-row  flex-col">
@@ -302,6 +302,8 @@ function Homeinfo() {
                 >
                   LinkedIn
                 </a>
+                <br />
+                <a href="/resume">Resume</a>
               </span>
             </p>
           </div>

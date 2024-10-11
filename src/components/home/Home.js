@@ -123,7 +123,7 @@ function Home() {
       });
       //wait for scroll to finish dont use
       setTimeout(() => {
-        window.location.href = `./projects/${encodeURIComponent(movie)}`;
+        window.location.href = `./work/${encodeURIComponent(movie)}`;
       }, 300);
     }
   }
@@ -369,7 +369,7 @@ function Home() {
       >
         <h1 className=" text-gray-600 font-medium cursor-pointer py-10  group text-3xl px-4 mx-auto max-w-full sm:px-6 lg:px-8 relative ">
           <span className="px-7  sm:px-10">
-            All Work{" "}
+            View All Work{" "}
             <span className="tracking-tighter group-hover:tracking-widest transition-all duration-300 ease-in-out">
               {" "}
               -{">"}

@@ -32,7 +32,7 @@ function Sectionpro({ title, poster, key, name, type, tags }) {
       transition={{ type: "ease", duration: "0.5" }}
       className="group mb-3 sm:mb-8 last:mb-0 sm:w-[48%] w-full  rounded-lg"
     >
-      <a href={`./projects/${encodeURIComponent(name)}`}>
+      <a href={`./work/${encodeURIComponent(name)}`}>
         <motion.section
           // Use layoutId here
           layoutId={`project-${name}`}
