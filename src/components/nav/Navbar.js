@@ -9,7 +9,7 @@ function Navbar() {
   const { scrollY } = useScroll();
 
   const [hidden, setHidden] = useState(false);
-  const [location, setLocation] = useState(false);
+  const [location, setLocation] = useState("");
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
@@ -23,13 +23,18 @@ function Navbar() {
   // on window load
 
   useEffect(() => {
-    const location = window.location.pathname;
-    if (location === "/projects") {
-      setLocation(true);
-    } else {
-      setLocation(false);
+    // check if window is defined
+    if (typeof window !== "undefined") {
+      const locationc = window.location.pathname;
+      // console.log(locationc);
+
+      setLocation(locationc);
     }
   }, []);
+
+  if (location == "/resume") {
+    return <> </>;
+  }
 
   return (
     <motion.nav
@@ -58,11 +63,11 @@ function Navbar() {
             <div className="hidden md:flex nav-p">
               <ul className={`flex space-x-8  text-gray-600 font-normal  `}>
                 <li className="relative group">
-                  <a href="/projects" className=" hover:text-black   text-2xl">
+                  <a href="/work" className=" hover:text-black   text-2xl">
                     <span className="tracking-[-1em] mr-5 group-hover:tracking-normal group-hover:mr-3  transition-all duration-300 ease-in-out">
                       {"//"}
                     </span>
-                    {location ? "Viewing Work" : "View Work"}
+                    {location == "/work" ? "Viewing Work" : "View Work"}
                   </a>
                 </li>
               </ul>

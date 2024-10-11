@@ -252,9 +252,8 @@ function Home() {
                             // variants={variants2}
                             // initial="default"
                             // animate="default"
-                            className="   absolute  bottom-[0px] right-[0px]   text-gray-600 font-medium text-lg scale-0 group-hover:scale-100 group-hover:text-black/75 group-hover:drop-shadow-2xl group-hover:backdrop-blur px-2 py-2 rounded-full bg-white/30 backdrop-blur-[4px] tracking-tighter group-hover:tracking-widest transition-all duration-300 ease-in-out  
-                            w-[200px]
-                            h-[200px]
+                            className="   absolute  bottom-5 right-5   text-gray-600 font-medium text-lg scale-0 group-hover:scale-100 group-hover:text-black/75 group-hover:drop-shadow-2xl group-hover:backdrop-blur px-4 py-1.5 rounded-full bg-white/30 backdrop-blur-[4px] tracking-tighter group-hover:tracking-widest transition-all duration-300 ease-in-out  
+                          
                             flex items-center justify-center
 
                             
@@ -365,12 +364,12 @@ function Home() {
         transition={{ duration: 0.4 }}
         className="-mt-[calc((100vh-(300px*(16/9)))/2)] space-y-3 cursor-pointer pt-4 md:-mt-[calc((100vh-(60vw*(9/16)))/2)]"
         onClick={() => {
-          window.location.href = "./projects";
+          window.location.href = "./work";
         }}
       >
         <h1 className=" text-gray-600 font-medium cursor-pointer py-10  group text-3xl px-4 mx-auto max-w-full sm:px-6 lg:px-8 relative ">
           <span className="px-7  sm:px-10">
-            All Projects{" "}
+            All Work{" "}
             <span className="tracking-tighter group-hover:tracking-widest transition-all duration-300 ease-in-out">
               {" "}
               -{">"}

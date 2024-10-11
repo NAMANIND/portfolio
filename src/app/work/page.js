@@ -4,6 +4,7 @@ import React from "react";
 import { movies } from "../../movies";
 import Sectionpro from "@/components/section/Sectionpro";
 import { motion } from "framer-motion";
+import { FollowerPointerCard } from "@/components/followerPointer/FollowerPointer";
 
 function Page() {
   const moviesok = movies.sort((a, b) => a.id - b.id);

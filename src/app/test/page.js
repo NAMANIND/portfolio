@@ -12,7 +12,6 @@ function Page() {
         },
         "*"
       );
-      console.log("Dimensions sent!");
     };
 
     window.addEventListener("load", sendDimension);

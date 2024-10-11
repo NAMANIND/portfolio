@@ -11,7 +11,7 @@ function app() {
   return (
     <>
       {/* <MarqueeText text={sampleText} /> */}
-      <Navbar />
+      {/* <Navbar /> */}
       <Home />
       <Homeinfo />
     </>
