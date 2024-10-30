@@ -7,6 +7,7 @@ import React, {
   useEffect,
   useRef,
   useCallback,
+  forwardRef,
 } from "react";
 import { ThemeProvider, useTheme } from "next-themes";
 

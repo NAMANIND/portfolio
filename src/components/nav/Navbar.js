@@ -36,7 +36,7 @@ function Navbar() {
     return <> </>;
   }
   if (location == "/news") {
-    return;
+    return <> </>;
   }
 
   return (
