@@ -12,7 +12,7 @@ import React, {
 import { ThemeProvider, useTheme } from "next-themes";
 
 import { X } from "lucide-react";
-import { Bookmark, Globe } from "lucide-react";
+import { Bookmark } from "lucide-react";
 
 import { Loader } from "lucide-react";
 import { Menu, Moon, Sun, Search } from "lucide-react";
@@ -200,7 +200,7 @@ const NewsContainer = () => {
   );
 };
 
-const NewsCard = forwardRef(({ article, isBookmarked }, ref) => {
+const NewsCard = forwardRef(function NewsCard({ article, isBookmarked }, ref) {
   const { toggleBookmark } = useBookmarks();
 
   return (
