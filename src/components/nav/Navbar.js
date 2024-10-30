@@ -35,6 +35,9 @@ function Navbar() {
   if (location == "/resume") {
     return <> </>;
   }
+  if (location == "/news") {
+    return;
+  }
 
   return (
     <motion.nav
