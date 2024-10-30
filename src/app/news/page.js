@@ -12,8 +12,6 @@ import React, {
 import { ThemeProvider, useTheme } from "next-themes";
 
 import { X } from "lucide-react";
-// src/components/NewsCard.jsx
-import { forwardRef } from "react";
 import { Bookmark, Globe } from "lucide-react";
 
 import { Loader } from "lucide-react";

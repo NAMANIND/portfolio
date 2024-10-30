@@ -8,7 +8,7 @@ function Page() {
         {
           height: 452,
           width: 384,
-          source: "iframe-dimension", // Unique identifier
+          source: "pap-iframe-dimension", // Unique identifier
         },
         "*"
       );
@@ -23,6 +23,16 @@ function Page() {
       window.removeEventListener("resize", sendDimension);
     };
   }, []);
+
+  const activate = () => {
+    window.parent.postMessage(
+      {
+        source: "iframe-action",
+        action: "activate",
+      },
+      "*"
+    );
+  };
 
   // Main content of the page
   // Set the height and width of the main content to match the content
@@ -83,7 +93,10 @@ function Page() {
               </div>
             </div>
             <div className="mt-4">
-              <button className="w-full mt-6 px-3 py-2 text-white rounded-lg bg-pink-600 focus:outline-none">
+              <button
+                onClick={activate}
+                className="w-full mt-6 px-3 py-2 text-white rounded-lg bg-pink-600 focus:outline-none"
+              >
                 Opt-In
               </button>
             </div>
