@@ -8,7 +8,7 @@ export const metadata = {
     "Founding Engineer at Roger (YC S24). I build AI agents, browser tools, and products from a blank page to production.",
 };
 
-const work = [
+const jobs = [
   {
     name: "Roger",
     meta: "Founding Engineer · YC S24 · 2025 – Present",
@@ -21,6 +21,9 @@ const work = [
     detail:
       "Launched car rental for 10,000+ daily users. Migrated 25,000+ users and raised conversion to 33%.",
   },
+];
+
+const projects = [
   {
     name: "Beacon",
     meta: "Building now",
@@ -54,6 +57,53 @@ const work = [
     ],
   },
 ];
+
+function EntryList({ items }) {
+  return (
+    <ul className="mt-5 space-y-10 sm:mt-6 sm:space-y-12">
+      {items.map((item) => (
+        <li key={item.name}>
+          <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8">
+            <h3 className="text-base font-medium tracking-tight sm:text-lg">
+              {item.name}
+            </h3>
+            <p className="text-xs leading-snug text-neutral-500 sm:shrink-0 sm:text-sm sm:leading-normal">
+              {item.meta}
+            </p>
+          </div>
+          <p className="mt-2 max-w-xl text-[0.9375rem] leading-relaxed text-neutral-700 sm:text-base">
+            {item.detail}
+          </p>
+          {item.href ? (
+            <a
+              href={item.href}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-3 inline-block text-sm underline underline-offset-4"
+            >
+              {item.label}
+            </a>
+          ) : null}
+          {item.links ? (
+            <p className="mt-3 flex gap-4 text-sm">
+              {item.links.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline underline-offset-4"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </p>
+          ) : null}
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 const also = [
   { name: "ICNA", tag: "Event website", href: "https://www.theiecna.com/" },
@@ -89,53 +139,15 @@ export default function Page() {
         </section>
 
         <section className="mt-14 sm:mt-24">
-          <h2 className="text-sm text-neutral-500">Selected work</h2>
-          <ul className="mt-5 sm:mt-6">
-            {work.map((item) => (
-              <li
-                key={item.name}
-                className="border-t border-black/10 py-5 last:border-b sm:py-6"
-              >
-                <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8">
-                  <h3 className="text-base font-medium tracking-tight sm:text-lg">
-                    {item.name}
-                  </h3>
-                  <p className="text-xs leading-snug text-neutral-500 sm:shrink-0 sm:text-sm sm:leading-normal">
-                    {item.meta}
-                  </p>
-                </div>
-                <p className="mt-2 max-w-xl text-[0.9375rem] leading-relaxed text-neutral-700 sm:text-base">
-                  {item.detail}
-                </p>
-                {item.href ? (
-                  <a
-                    href={item.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-3 inline-block text-sm underline underline-offset-4"
-                  >
-                    {item.label}
-                  </a>
-                ) : null}
-                {item.links ? (
-                  <p className="mt-3 flex gap-4 text-sm">
-                    {item.links.map((link) => (
-                      <a
-                        key={link.href}
-                        href={link.href}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="underline underline-offset-4"
-                      >
-                        {link.label}
-                      </a>
-                    ))}
-                  </p>
-                ) : null}
-              </li>
-            ))}
-          </ul>
-          <ul className="mt-6 flex flex-col gap-3 border-t border-black/10 pt-6 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-y-2 sm:border-0 sm:pt-0">
+          <h2 className="text-sm text-neutral-500">Work</h2>
+          <EntryList items={jobs} />
+        </section>
+
+        <section className="mt-16 sm:mt-20">
+          <h2 className="text-sm text-neutral-500">Projects</h2>
+          <EntryList items={projects} />
+          <p className="mt-6 text-sm text-neutral-500 sm:mt-8">More</p>
+          <ul className="mt-3 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-y-2">
             {also.map((item, index) => (
               <li key={item.name} className="flex items-baseline sm:inline-flex">
                 {index > 0 ? (
