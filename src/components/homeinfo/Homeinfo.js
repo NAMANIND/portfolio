@@ -294,7 +294,7 @@ function Homeinfo() {
               hear from you.
               <span className="text-black font-medium">
                 <br />
-                hello@namanrai.tech
+                namanrai309@gmail.com
                 <br />
                 <a
                   href="https://www.linkedin.com/in/namannrai/"

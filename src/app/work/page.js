@@ -38,7 +38,7 @@ function Page() {
               from you.
               <span className="text-black font-medium">
                 <br />
-                hello@namanrai.tech
+                namanrai309@gmail.com
                 <br />
               </span>
             </p>

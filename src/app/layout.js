@@ -12,7 +12,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Naman Rai",
-  description: "Full Stack Developer",
+  description:
+    "Founding Engineer at Roger (YC S24). I build AI agents, browser tools, and products from a blank page to production.",
 };
 
 export default function RootLayout({ children }) {

@@ -27,6 +27,16 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.corner-hue {
+  background-color: #fff;
+  background-image: radial-gradient(
+    46rem 34rem at 100% 0%,
+    rgba(255, 122, 26, 0.62),
+    rgba(255, 122, 26, 0.14) 40%,
+    transparent 68%
+  );
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

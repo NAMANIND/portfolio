@@ -1,15 +1,16 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 
 function Navbar() {
   const { scrollY } = useScroll();
+  const pathname = usePathname();
 
   const [hidden, setHidden] = useState(false);
-  const [location, setLocation] = useState("");
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
@@ -20,23 +21,8 @@ function Navbar() {
     }
   });
 
-  // on window load
-
-  useEffect(() => {
-    // check if window is defined
-    if (typeof window !== "undefined") {
-      const locationc = window.location.pathname;
-      // console.log(locationc);
-
-      setLocation(locationc);
-    }
-  }, []);
-
-  if (location == "/resume") {
-    return <> </>;
-  }
-  if (location == "/news") {
-    return <> </>;
+  if (pathname === "/" || pathname === "/resume" || pathname === "/news") {
+    return null;
   }
 
   return (
@@ -57,7 +43,7 @@ function Navbar() {
         >
           <div className="flex items-end justify-between h-14 sm:h-16">
             <div className="flex items-center">
-              <a href="/" className="text-black  text-2xl font-medium">
+              <a href="/archive" className="text-black  text-2xl font-medium">
                 Naman rai
                 <br />
                 Full Stack Developer
@@ -70,7 +56,7 @@ function Navbar() {
                     <span className="tracking-[-1em] mr-5 group-hover:tracking-normal group-hover:mr-3  transition-all duration-300 ease-in-out">
                       {"//"}
                     </span>
-                    {location == "/work" ? "Viewing Work" : "View Work"}
+                    {pathname === "/work" ? "Viewing Work" : "View Work"}
                   </a>
                 </li>
               </ul>
