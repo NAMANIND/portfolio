@@ -64,43 +64,47 @@ const also = [
 
 export default function Page() {
   return (
-    <main className={`${inter.className} corner-hue min-h-screen text-neutral-950`}>
-      <div className="mx-auto max-w-3xl px-6 py-16 sm:py-24">
-        <header className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+    <main
+      className={`${inter.className} corner-hue min-h-screen overflow-x-hidden text-neutral-950`}
+    >
+      <div className="mx-auto w-full max-w-3xl px-5 py-12 sm:px-6 sm:py-24">
+        <header className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
           <p className="text-sm tracking-tight">Naman Rai</p>
           <a
             href="mailto:namanrai309@gmail.com"
-            className="text-sm text-neutral-500 underline-offset-4 hover:text-neutral-950 hover:underline"
+            className="text-sm text-neutral-500 underline-offset-4 hover:text-neutral-950 hover:underline sm:text-right"
           >
             namanrai309@gmail.com
           </a>
         </header>
 
-        <section className="mt-24 sm:mt-32">
-          <h1 className="max-w-xl text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
+        <section className="mt-14 sm:mt-32">
+          <h1 className="max-w-xl text-balance text-[1.75rem] font-medium leading-[1.15] tracking-tight sm:text-4xl sm:leading-tight lg:text-5xl">
             I build products that make software more capable.
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-neutral-600">
+          <p className="mt-4 max-w-xl text-base leading-relaxed text-neutral-600 sm:mt-6 sm:text-lg">
             Founding Engineer at Roger (YC S24). I take products from a blank
             page to production. AI agents, browser tools, and outbound systems.
           </p>
         </section>
 
-        <section className="mt-24">
+        <section className="mt-14 sm:mt-24">
           <h2 className="text-sm text-neutral-500">Selected work</h2>
-          <ul className="mt-6">
+          <ul className="mt-5 sm:mt-6">
             {work.map((item) => (
               <li
                 key={item.name}
-                className="border-t border-black/10 py-6 last:border-b"
+                className="border-t border-black/10 py-5 last:border-b sm:py-6"
               >
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8">
-                  <h3 className="text-lg font-medium tracking-tight">
+                  <h3 className="text-base font-medium tracking-tight sm:text-lg">
                     {item.name}
                   </h3>
-                  <p className="shrink-0 text-sm text-neutral-500">{item.meta}</p>
+                  <p className="text-xs leading-snug text-neutral-500 sm:shrink-0 sm:text-sm sm:leading-normal">
+                    {item.meta}
+                  </p>
                 </div>
-                <p className="mt-2 max-w-xl leading-relaxed text-neutral-700">
+                <p className="mt-2 max-w-xl text-[0.9375rem] leading-relaxed text-neutral-700 sm:text-base">
                   {item.detail}
                 </p>
                 {item.href ? (
@@ -131,34 +135,34 @@ export default function Page() {
               </li>
             ))}
           </ul>
-          <p className="mt-8 flex flex-wrap items-center gap-y-2 text-sm text-neutral-500">
+          <ul className="mt-6 flex flex-col gap-3 border-t border-black/10 pt-6 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-y-2 sm:border-0 sm:pt-0">
             {also.map((item, index) => (
-              <span key={item.name} className="inline-flex items-center">
+              <li key={item.name} className="flex items-baseline sm:inline-flex">
                 {index > 0 ? (
-                  <span className="mx-3 text-neutral-300">/</span>
+                  <span className="mx-3 hidden text-neutral-300 sm:inline">/</span>
                 ) : null}
                 <a
                   href={item.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-baseline gap-1.5 hover:text-neutral-950"
+                  className="inline-flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5 text-sm text-neutral-500 hover:text-neutral-950"
                 >
                   <span className="underline-offset-4 hover:underline">
                     {item.name}
                   </span>
                   <span className="text-xs text-neutral-400">{item.tag}</span>
                 </a>
-              </span>
+              </li>
             ))}
-          </p>
+          </ul>
         </section>
 
-        <p className="mt-24 text-sm leading-relaxed text-neutral-500">
+        <p className="mt-14 text-xs leading-relaxed text-neutral-500 sm:mt-24 sm:text-sm">
           TypeScript · React · Next.js · Node.js · React Native · Chrome
           Extensions · AI Agents · MCP · AWS
         </p>
 
-        <footer className="mt-12 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+        <footer className="mt-10 flex flex-wrap gap-x-5 gap-y-3 pb-8 text-sm sm:mt-12 sm:pb-0">
           <a
             href="mailto:namanrai309@gmail.com"
             className="underline underline-offset-4"

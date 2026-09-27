@@ -37,6 +37,17 @@ body {
   );
 }
 
+@media (max-width: 640px) {
+  .corner-hue {
+    background-image: radial-gradient(
+      22rem 18rem at 100% 0%,
+      rgba(255, 122, 26, 0.55),
+      rgba(255, 122, 26, 0.12) 42%,
+      transparent 72%
+    );
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
